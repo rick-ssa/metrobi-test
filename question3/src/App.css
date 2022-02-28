@@ -1,0 +1,82 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  padding: 10px 5px;
+}
+
+.app__first-section {
+  display: flex;
+  width: 100%;
+  padding: 0 5px 10px;
+}
+
+.app__first-section__left-side {
+  display: flex;
+  flex: 3;
+  flex-direction: column;
+  padding-right: 2.5px;
+  height: 600px;
+}
+
+.app__first-section__left-side__hero {
+  display: flex;
+  flex: 4;
+  padding-bottom: 10px;
+}
+
+.app__first-section__left-side__sidebar {
+  display: flex;
+  flex: 6;
+}
+
+.app__first-section__right-side {
+  display: flex;
+  flex: 4;
+  flex-direction: column;
+  padding-left: 2.5px;
+}
+
+.app__first-section__right-side__main {
+  display: flex;
+  flex: 7;
+  padding-bottom: 10px;
+}
+
+.app__first-section__right-side__extra-content {
+  display: flex;
+  flex: 3;
+}
+
+.app__second-section {
+  display: flex;
+  width: 100%;
+  padding: 0 5px 10px;
+  height: 150px;
+}
+
+.app__second-section__related-images {
+  display: flex;
+  flex: 5;
+  padding-right: 5px;
+}
+
+.app__second-section__related-posts {
+  display: flex;
+  flex: 2;
+}
+
+footer {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  padding: 0 5px 10px;
+  height: 80px;
+}
