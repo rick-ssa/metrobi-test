@@ -6,7 +6,8 @@
 
 const openCloseBrackets = brackets => {
     const openBrackets = ['{','[','(']
-    const closeBrackets = {"{":"}", "[":"]", "(":")"}
+    const objectBrackets = {"{":"}", "[":"]", "(":")"}
+    const closeBrackets = ['}',']',')']
     const stack = []
 
     if (!openBrackets.includes(brackets.charAt(0))
@@ -21,9 +22,9 @@ const openCloseBrackets = brackets => {
         
         if(openBrackets.includes(character)) {
 
-            stack.push(closeBrackets[character])
+            stack.push(objectBrackets[character])
 
-        } else if(['}',']',')'].includes(character)) {
+        } else if(closeBrackets.includes(character)) {
 
             let expectedCloseBrackets = stack.pop()
 
