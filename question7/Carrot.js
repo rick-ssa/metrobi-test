@@ -8,19 +8,49 @@ maximum value the bag can hold. [Python or Javascript]*/
 
 
 const getMaxValue = (carrotType, capacity) => {
-     carrotType.sort((a,b)=> {
+    let maxValue = 0
+
+    // sort for price/kg desc
+    carrotType.sort((a,b)=> {
         const priceByKgA = a.price / a.kg
         const priceByKgB = b.price / b.kg
-        if(priceByKgA.toFixed(2) === priceByKgB.toFixed(2)) {
+
+        if(priceByKgA.toFixed(2) === priceByKgB.toFixed(2)) { // case have the same price/kilo sort for kg asc
             return a.kg - b.kg
         }
+
         return priceByKgB - priceByKgA 
     })
 
-    return carrotType
+    carrotType.map((carrot,index, array)=>{
+        let idStart = index + 1
+        let quantity = Math.floor(capacity / carrot.kg)
+        let value = quantity * carrot.price
+        let capacityLeft = capacity - (quantity * carrot.kg)
+        if (capacityLeft===0) {
+            maxValue = Math.max(maxValue,value)
+            return
+        }
+        for(let i = idStart; i < array.length; i++ ) {
+            if(array[i].kg > capacityLeft) {
+                continue
+            }
+            quantity = Math.floor(capacityLeft / array[i].kg)
+            value += quantity * array[i].price
+            capacityLeft = capacityLeft - (quantity * array[i].kg)
+            if (capacityLeft===0) {
+                maxValue = Math.max(maxValue,value)
+                return
+            }
+        }
+
+        maxValue = Math.max(maxValue,value)
+    })
+
+    return maxValue
 }
 
-const solution  = getMaxValue( [{kg: 7, price: 150}, {kg: 34, price: 816},{kg: 5, price: 100},{kg: 2, price: 40},{kg: 3, price: 70}],36)
+const solution  = getMaxValue( [{kg: 7, price: 150},{kg:2, price:40}, {kg: 37, price: 816},{kg: 5, price: 100},{kg: 3, price: 70}],36)
 
 
 

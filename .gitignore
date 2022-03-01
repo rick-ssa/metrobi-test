@@ -21,3 +21,5 @@
 /question3/npm-debug.log*
 /question3/yarn-debug.log*
 /question3/yarn-error.log*
+
+.vscode

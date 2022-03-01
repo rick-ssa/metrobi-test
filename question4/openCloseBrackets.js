@@ -37,4 +37,3 @@ const openCloseBrackets = brackets => {
     return stack.length === 0
 }
 
-
