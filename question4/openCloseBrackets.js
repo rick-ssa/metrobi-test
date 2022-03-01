@@ -16,10 +16,15 @@ const openCloseBrackets = brackets => {
     }
 
     for(let i=0; i < brackets.length; i++) {
+
         let character = brackets.charAt(i)
-        if(openBrackets.includes(brackets.charAt(i))) {
+        
+        if(openBrackets.includes(character)) {
+
             stack.push(closeBrackets[character])
-        } else {
+
+        } else if(['}',']',')'].includes(character)) {
+
             let expectedCloseBrackets = stack.pop()
 
             if(character !== expectedCloseBrackets) {
@@ -31,11 +36,4 @@ const openCloseBrackets = brackets => {
     return stack.length === 0
 }
 
-console.log(openCloseBrackets('{[()]()[]{}}'))//true
-console.log(openCloseBrackets('{[]}')) //true
-console.log(openCloseBrackets('{(])}')) //false
-console.log(openCloseBrackets('{([)]}')) //false
-console.log(openCloseBrackets('}[]}')) //false
-console.log(openCloseBrackets('}[]}')) //false
-console.log(openCloseBrackets('{[)}')) //false
-console.log(openCloseBrackets('')) //false
+
