@@ -2,8 +2,6 @@
 "(", ")", "[", "]") opened and closed properly. Example: “{[]}” => true, “{(])}” => false,
 “{([)]}” => false */
 
-// can it have any other character besides the brackets?
-
 const openCloseBrackets = brackets => {
     const openBrackets = ['{','[','(']
     const objectBrackets = {"{":"}", "[":"]", "(":")"}

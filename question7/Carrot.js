@@ -3,9 +3,6 @@ types. Also, you have one bag that can hold a limited weight. Each type of carro
 weight and a price. Write a function that takes carrotTypes and capacity and return the
 maximum value the bag can hold. [Python or Javascript]*/
 
-// when does the question say maximum value it refers to price or weight?  
-// If it is weight, what is the criteria do fill the bag? lower price amount or higher price amount?
-
 
 const getMaxValue = (carrotType, capacity) => {
     let maxValue = 0
