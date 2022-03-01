@@ -34,6 +34,15 @@ Write an efficient method that tells us whether or not an input string brackets 
 
 [code](question4/openCloseBrackets.js)
 
+### `Question 5`
+
+A building has 100 floors. One of the floors is the highest floor an egg can be dropped\
+from without breaking. If a n egg is dropped from above that floor, it will break. If it is\
+dropped from that floor or below, it will be completely undamaged and you can drop theegg again. Given two eggs,\ find the highest floor an egg can be dropped from without\
+breaking, with as few drops as possible in the worst-case scenario.
+
+[code](question5/higestFloor.js)
+
 ### `Question 7`
 
 Think that you have an unlimited number of carrots, but a limited number of carrot\
