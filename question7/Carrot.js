@@ -41,13 +41,13 @@ const getMaxValue = (carrotType, capacity) => {
 
             if(array[i].kg > capacityLeft) {
                 let pullOutOffBagQuantity = (
-                    Math.floor(array[i].kg / carrot.kg) * carrot.kg + capacityLeft >= array[i].kg ?
-                    Math.floor(array[i].kg / carrot.kg) :
-                    Math.floor(array[i].kg / carrot.kg) + 1
+                    Math.floor(array[i].kg / array[i-1].kg) * array[i-1].kg + capacityLeft >= array[i].kg ?
+                    Math.floor(array[i].kg / array[i-1].kg) :
+                    Math.floor(array[i].kg / array[i-1].kg) + 1
                 )
 
                 maxValue = Math.max(maxValue,value)
-                maxValue = Math.max(maxValue,value - pullOutOffBagQuantity * carrot.price + array[i].price)
+                maxValue = Math.max(maxValue,value - pullOutOffBagQuantity * array[i-1].price + array[i].price)
 
                 continue
             }
@@ -72,7 +72,7 @@ const getMaxValue = (carrotType, capacity) => {
 }
 
 const arr = [{kg: 7, price: 150},{kg: 5, price: 100},{kg: 3, price: 70}]
-const capacity = 40
+const capacity = 37
 const solution  = getMaxValue( arr,capacity)
 
  
