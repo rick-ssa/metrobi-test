@@ -6,6 +6,12 @@ Challenges for test interview by [Metrobi](https://metrobi.com/)
 
 Taken tests are the follwing:
 
+### `Question 1`
+
+Write a javascript function that finds the duplicate items in any given array.
+
+[code](question1/duplicateItem.js)
+
 ### `Question 2`
 
 Write an async javascript function that writes every item in any given array with 1, 2,\
