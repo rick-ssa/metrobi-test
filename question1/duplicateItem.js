@@ -1,11 +1,6 @@
 //1) Write a javascript function that finds the duplicate items in any given array.
 
 
-// duplicate is a number * 2?
-// the input array arg will contain only string and number or objects and other arrays too?
-// if there is two string i shoud consider it as case insensitive or sensitive?
-// the output should be an array?
-
 const duplicateItems = (items) => {
     const objectItems = items.reduce((prev,item)=>{
         let key = item
