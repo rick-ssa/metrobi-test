@@ -5,7 +5,7 @@ breaking, with as few drops as possible in the worst-case scenario. */
 
 
 //the function returns an object with the highest floor where anyone can drop an egg without break it,
-// the first floor where a egg will break if it is dropped and the times that the eggs was dropped.
+// the first floor where a egg will break if it is dropped and the times that the eggs were dropped.
 // there is a optional argument to provide the highest floor that the egg will not break. If it is not provide
 // a random floor will be generate
 
